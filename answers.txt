@@ -1,0 +1,20 @@
+# 1
+$ grep '^Z' cities.txt
+
+# 2
+$ grep "gan\'" cities.txt
+$ grep 'gan$' cities.txt
+
+#3
+$ grep -c ^[ADE] cities.txt
+
+#4
+$ grep -c '\<.ar' cities.txt
+
+#5
+$ grep -cv '^C' cities.txt
+
+#6
+
+#7
+$ grep -c '^B' cities 
