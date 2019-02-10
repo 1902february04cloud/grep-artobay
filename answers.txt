@@ -27,7 +27,7 @@ $ grep -o [d] cities.txt | grep -c [d]
             so we need to pipe it to -o which separate d to the new lines
 
 #9
-$ grep -E grep -E '(.)\1$' cities.txt
+$ grep -E '(.)\1$' cities.txt
 
 #10
 grep -iw  '^\(.\)\(.\).\2\1$' cities.txt
