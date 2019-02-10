@@ -15,6 +15,22 @@ $ grep -c '\<.ar' cities.txt
 $ grep -cv '^C' cities.txt
 
 #6
+$ grep -E [[:alpha:]-]{14,} cities.txt
 
 #7
-$ grep -c '^B' cities 
+$ grep -c '^B' cities
+
+#8
+$ grep -o [d] cities.txt | grep -c [d]
+
+--comments: -c flag will miss the repetition and breaks the line,
+            so we need to pipe it to -o which separate d to the new lines
+
+#9
+$ grep -E grep -E '(.)\1$' cities.txt
+
+#10
+grep -iw  '^\(.\)\(.\).\2\1$' cities.txt
+
+--comments: searches for the first any three letters  by using \(.\)\(.\).
+            after that we are searching the same 2nd character and 1st character is occurring or not.
